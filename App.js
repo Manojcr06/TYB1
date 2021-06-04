@@ -1,21 +1,23 @@
-import {createStackNavigator} from 'react-navigation-stack';
-import {createAppContainer} from 'react-navigation';
-import Splash from './Splash';
-import Login from './Login';
-import SignUp from './SignUp';
-import InputOTPScreen from './InputOTPScreen';
-import Verify from './Verify';
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
+import AppContainer from "./Src/Screens/AppContainer";
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <View style={style.container}>
+        <AppContainer />
+      </View>
+    );
+  }
+}
 
-const App=createStackNavigator({
-
-  Splash:{screen:Splash, navigationOptions:{headerShown:false}},
-  Login:{screen:Login, navigationOptions:{headerShown:false}},
-  SignUp:{screen:SignUp, navigationOptions:{headerShown:false}},
-  InputOTPScreen:{screen:InputOTPScreen, navigationOptions:{headerShown:false}},
-  Verify:{screen:Verify, navigationOptions:{headerShown:false}},
-  
-
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
 });
-
-export default createAppContainer(App);
+export default App;
