@@ -17,7 +17,7 @@ const Button = ({
         style={[
           styles.btn_container,
           {
-            width: btnwidth || "75%",
+            width: btnwidth || "80%",
             height: btnheight || 50,
             backgroundColor: bgcolor || "orange",
             borderWidth: btnborder,
@@ -33,14 +33,16 @@ const Button = ({
 
 const styles = StyleSheet.create({
   btn_container: {
-    borderRadius: 10,
+    borderRadius: 5,
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
+    marginTop: 30,
   },
   normal_text: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: 19,
+    fontWeight:"bold"
   },
 });
 export default Button;
