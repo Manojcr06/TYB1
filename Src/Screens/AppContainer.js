@@ -8,6 +8,7 @@ import SplashScreen from "./SplashScreen";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import InputOTPScreen from "./InputOTPScreen";
+import Verify from "./Verify";
 const Stack = createStackNavigator();
 
 function AppContainer({ navigation }) {
@@ -33,6 +34,11 @@ function AppContainer({ navigation }) {
             name="InputOTPScreen"
             component={InputOTPScreen}
             options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="Verify"
+          component={Verify}
+          options={{gestureEnabled: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
