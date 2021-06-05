@@ -4,9 +4,11 @@ import {View, StyleSheet, Text, Image, ScrollView} from 'react-native';
 import Inputs from './Inputs';
 
 import Button from "../Common/Button";
+import { Component } from 'react';
 
 
-const Verify = props => {
+class Verify extends Component {
+    render(){
     return (
         <ScrollView style={{backgroundColor: 'white'}}>
             <View style={styles.container}>
@@ -19,11 +21,13 @@ const Verify = props => {
                 
             </View>
             <Button
-          onPress={() => props.navigation.navigate("SignUp")}
+          onPress={() => this.props.navigation.navigate("Created")}
         >{`Next ->`}</Button>
         </ScrollView>      
     );
+}
 };
+
 
 const styles = StyleSheet.create({
     container: {
