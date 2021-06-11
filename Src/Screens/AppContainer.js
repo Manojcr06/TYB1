@@ -10,6 +10,8 @@ import SignUp from "./SignUp";
 import InputOTPScreen from "./InputOTPScreen";
 import Verify from "./Verify";
 import Created from "./Created";
+import Selected from "./Selected";
+import Profiles from "./Profiles";
 const Stack = createStackNavigator();
 
 function AppContainer({ navigation }) {
@@ -44,6 +46,16 @@ function AppContainer({ navigation }) {
         <Stack.Screen
           name="Created"
           component={Created}
+          options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="Selected"
+          component={Selected}
+          options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="Profiles"
+          component={Profiles}
           options={{gestureEnabled: false}}
         />
       </Stack.Navigator>

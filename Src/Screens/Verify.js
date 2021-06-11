@@ -21,7 +21,7 @@ class Verify extends Component {
                 
             </View>
             <Button
-          onPress={() => this.props.navigation.navigate("Created")}
+          onPress={() => this.props.navigation.navigate("Selected")}
         >{`Next ->`}</Button>
         </ScrollView>      
     );
